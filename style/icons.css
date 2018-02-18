@@ -1,0 +1,63 @@
+@CHARSET "UTF-8";
+/* * * * * * * * * * * * *
+ * © 2018 Joni Puljujärvi
+ */
+
+
+#facebook   {background-position: 0 calc( 0  * 10vmin); background-color: #3B5998;}
+#googleplus {background-position: 0 calc(-1  * 10vmin); background-color: #D14836;}
+#github     {background-position: 0 calc(-2  * 10vmin); background-color: #181717;}
+#linkedin   {background-position: 0 calc(-3  * 10vmin); background-color: #0077B5;}
+#wordpress  {background-position: 0 calc(-4  * 10vmin); background-color: #21759B;}
+#soundcloud {background-position: 0 calc(-5  * 10vmin); background-color: #FF3300;}
+#gravatar   {background-position: 0 calc(-6  * 10vmin); background-color: #1E8CBE;}
+#aboutme    {background-position: 0 calc(-7  * 10vmin); background-color: #044A75;}
+
+#html5      {background-position: 0 calc(-8  * 10vmin); background-color: #E34F26;}
+#css3       {background-position: 0 calc(-9  * 10vmin); background-color: #1B73BA;}
+#javascript {background-position: 0 calc(-10 * 10vmin); background-color: #F1D409;}
+
+.icons a {
+    background-image: url(../img/socialicons.png);
+    background-origin: content-box;
+    background-clip: content-box;
+    background-size: 100% auto;
+    display: block;
+    float: left;
+    border-radius: 1vmin;
+    box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.5),
+    0 0 0.5rem 0 rgba(0, 0, 0, 0.5) inset;
+    transition: all 200ms linear;
+    width: 10vmin;
+    height: 10vmin;
+    margin: 1vmin 0;
+}
+
+aside.icons {
+    width: 10vmin;
+    margin: 2vmin;
+}
+
+footer .icons {
+    width: 30vmin;
+    float: left;
+    height: 10vmin;
+    margin: 0 calc(50% - 15vmin);
+}
+
+aside.icons a:hover {
+    transform: perspective(200px) rotateY(30deg);
+    box-shadow: 0 0.25rem 0.45rem 0.20rem rgba(0, 0, 0, 0.5),
+    0 0 0.5rem 0 rgba(0, 0, 0, 0.5) inset;
+}
+
+footer .icons a:hover {
+    transform: perspective(200px) rotateX(30deg) scale(0.75);
+    box-shadow: 0 0.25rem 0.45rem 0.20rem rgba(0, 0, 0, 0.5),
+    0 0 0.5rem 0 rgba(0, 0, 0, 0.5) inset !important;
+}
+
+footer .icons a {
+    transform: scale(0.75);
+}
+
