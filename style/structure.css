@@ -277,65 +277,6 @@ main ~ article ul, main ~ article figure {
 
 
 
-/* JavaScript disabled? */
-
-noscript {
-    position: fixed;
-    top: 10vh;
-    right: 5vw;
-    left: initial;
-    border-color: #ff8a65 #ff7043 #ff5722 #f4511e;
-    background-color: #fbe9e7;
-    border-style: solid;
-    border-width: 0.75rem;
-    padding: 1vw;
-    width: 20vw;
-    height: 5vw;
-    transform: scale(0.75);
-    opacity: 0;
-    animation: cum 2s linear 1s forwards;
-}
-
-
-
-/* Animations */
-
-@keyframes cum {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes rotate {
-    from {transform: rotate(0deg);}
-    to   {transform: rotate(360deg);}
-}
-
-
-
-/* Webkit scrollbars */
-
-::-webkit-scrollbar {
-    width: 8px;
-    background-color: #FFAB91;
-}
-::-webkit-scrollbar-button {
-    height: 0;
-}
-::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
-}
-::-webkit-scrollbar-track-piece {}
-::-webkit-scrollbar-thumb {
-    background-color: #FF5722;
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.75), 2px 2px 6px rgba(0,0,0,0.5);
-    border-radius: 4px;
-}
-::-webkit-scrollbar-corner {height: 0;}
-::-webkit-resizer {height: 0;}
-
-
-
-
 /* Albums */
 
 figure.album {
@@ -373,8 +314,6 @@ figure.album img {
 #websites figure {
     margin-bottom: 3rem;
 }
-
-
 
 #imgview {
     background: rgba(0,0,0,0.95);
@@ -431,3 +370,61 @@ figure.album img {
     color: #FFFFFF;
     text-decoration: none;
 }
+
+
+
+/* Animations */
+
+@keyframes cum {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(360deg);}
+}
+
+
+
+/* JavaScript disabled? */
+
+noscript {
+    position: fixed;
+    top: 10vh;
+    right: 5vw;
+    left: initial;
+    border-color: #ff8a65 #ff7043 #ff5722 #f4511e;
+    background-color: #fbe9e7;
+    border-style: solid;
+    border-width: 0.75rem;
+    padding: 1vw;
+    width: 20vw;
+    height: 5vw;
+    transform: scale(0.75);
+    opacity: 0;
+    animation: cum 2s linear 1s forwards;
+}
+
+
+
+/* Webkit scrollbars */
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: #FFAB91;
+}
+::-webkit-scrollbar-button {
+    height: 0;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-track-piece {}
+::-webkit-scrollbar-thumb {
+    background-color: #FF5722;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.75), 2px 2px 6px rgba(0,0,0,0.5);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-corner {height: 0;}
+::-webkit-resizer {height: 0;}
