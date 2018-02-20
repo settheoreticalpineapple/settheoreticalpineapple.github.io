@@ -148,12 +148,12 @@ main article {
 
 .round {
     position: absolute;
-    width: 60vmin;
-    height: 60vmin;
-    border-radius: calc(30vh + 0.2em);
+    width: 32vw;
+    height: 32vw;
+    border-radius: calc(16vw + 0.2em);
     border: 0.4em solid #BF360C;
-    left: calc(50vw - 30vmin);
-    top: 20vmin;
+    left: 34vw;
+    top: 9vw;
     animation: rotate 256s infinite linear;
     box-shadow: 0.03em 0.025em 0.025em rgba(0, 0, 0, 0.5), 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000, 0 0 0.05rem #000000 inset;
 }
@@ -217,10 +217,10 @@ main article {
 .round div:nth-child(4) p::first-letter {margin-left: calc(-0.94rem - 2.65rem);}
 .round div:nth-child(4) p               {margin-left: -0.56rem;}
 
-.round div:nth-child(1) {top: calc( 0vmin - 3.25em); left: calc(30vmin - 3.25em);}
-.round div:nth-child(2) {top: calc(30vmin - 3.25em); left: calc(60vmin - 3.25em);}
-.round div:nth-child(3) {top: calc(60vmin - 3.25em); left: calc(30vmin - 3.25em);}
-.round div:nth-child(4) {top: calc(30vmin - 3.25em); left: calc( 0vmin - 3.25em);}
+.round div:nth-child(1) {top: calc( 0vw - 3.25em); left: calc(16vw - 3.25em);}
+.round div:nth-child(2) {top: calc(16vw - 3.25em); left: calc(32vw - 3.25em);}
+.round div:nth-child(3) {top: calc(32vw - 3.25em); left: calc(16vw - 3.25em);}
+.round div:nth-child(4) {top: calc(16vw - 3.25em); left: calc( 0vw - 3.25em);}
 
 
 
