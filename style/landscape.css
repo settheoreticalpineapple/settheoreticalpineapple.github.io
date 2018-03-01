@@ -19,17 +19,14 @@ body {
 
 main {
     height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
     perspective: 600px;
     perspective-origin-x: 100%;
     -webkit-perspective-origin-x: 100%;
-    position: relative;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     scroll-behavior: smooth;
-    z-index: 0;
     transform: translateZ(0);
+    z-index: 0;
 }
 
 main > * {
@@ -49,6 +46,7 @@ main > * {
     transform: translateZ(-600px) scale(2.02);
     background-position: center 15vh;
     padding-bottom: 15vh;
+    height: 133.35vw;
 }
 
 

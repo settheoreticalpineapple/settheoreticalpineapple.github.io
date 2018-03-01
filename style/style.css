@@ -94,6 +94,12 @@ a:hover, a:active    {color: #FF8A65;}
 
 /* Structural elements */
 
+main {
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: relative;
+}
+
 main footer {
     color: #f0f4c3;
     text-shadow: 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000;
@@ -156,7 +162,6 @@ main ~ article ul, main ~ article figure {
     background-position: center top;
     background-repeat: no-repeat;
     position: fixed;
-    height: 133.35vw;
     width: 100%;
 }
 
