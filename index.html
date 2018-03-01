@@ -8,6 +8,7 @@
         <meta name="author" content="Joni Puljujärvi" />
         <meta name="description" content="The portfolio website of Joni Puljujärvi, a zoon-to-be mathematician and an artist" />
         <meta name="keywords" content="mathematics, philosophy, natural sciences, linguistics, art, web design, science fiction, video game development, Crudelis Diabolus, music, logic, set theory, University of Helsinki" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- Open Graph -->
         <meta property="og:title" content="Portfolio — Joni Puljujärvi"/>
         <meta property="og:type" content="website"/>
@@ -22,8 +23,10 @@
         <!-- Stylesheets -->
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Alegreya|Alegreya+Sans|Droid+Serif|Share+Tech+Mono"/>
         <link rel="stylesheet" type="text/css" href="style/typography.css" />
+        <link rel="stylesheet" type="text/css" href="style/style.css" />
         <link rel="stylesheet" type="text/css" href="style/icons.css" />
-        <link rel="stylesheet" type="text/css" href="style/structure.css" />
+        <link rel="stylesheet" type="text/css" href="style/landscape.css" media="screen and (orientation: landscape) and (min-width: 1049px)" />
+        <link rel="stylesheet" type="text/css" href="style/portrait.css" media="screen and (orientation: portrait), screen and (max-width: 1048px)" />
         <script type="text/javascript" src="js/magictricks.js"></script>
     </head>
     <body>
@@ -73,6 +76,16 @@
                     HTML5, CSS3 and a tiny bit of JavaScript.
                 </p>
             </article>
+            <aside class="icons">
+                <a target="_blank" id="facebook" title="Facebook" href="https://facebook.com/joni.puljujarvi"></a>
+                <a target="_blank" id="googleplus" title="Google+" href="https://www.google.com/+JoniPuljuj%C3%A4rviFTW"></a>
+                <a target="_blank" id="github" title="GitHub" href="https://github.com/settheoreticalpineapple/"></a>
+                <a target="_blank" id="linkedin" title="LinkedIn" href="https://fi.linkedin.com/in/jonipuljujarvi"></a>
+                <a target="_blank" id="wordpress" title="WordPress" href="https://settheoreticalpineapple.wordpress.com/"></a>
+                <a target="_blank" id="soundcloud" title="SoundCloud" href="https://soundcloud.com/crudelis-diabolus"></a>
+                <a target="_blank" id="gravatar" title="Gravatar" href="https://gravatar.com/settheoreticalpineapple"></a>
+                <a target="_blank" id="aboutme" title="about.me" href="https://about.me/jonipuljujarvi"></a>
+            </aside>
             <section>
                 <nav class="round">
                     <div id="writings-link"><p>Writings</p></div>
@@ -81,7 +94,7 @@
                     <div id="websites-link"><p>Websites</p></div>
                 </nav>
             </section>
-            <section>
+            <section id="landscape">
                 <article id="contact">
                     <div>
                         <h3>Contact Information</h3>
@@ -110,21 +123,11 @@
                     <a class="icon" target="_blank" id="css3" title="CSS3" href="https://www.w3.org/TR/CSS/"></a>
                     <a class="icon" target="_blank" id="javascript" title="JavaScript" href="https://www.javascript.com/" style="box-shadow: 0 3pt 6pt rgba(0, 0, 0, 0.5), 0 0 6pt rgba(0, 0, 0, 0.2) inset;"></a>
                 </div>
-                <p class="noinitial">&copy;
+                <p class="noindent">&copy;
                     <time id="year">2018</time>
                     Joni Puljujärvi
                 </p>
             </footer>
-            <aside class="icons">
-                <a target="_blank" id="facebook" title="Facebook" href="https://facebook.com/joni.puljujarvi"></a>
-                <a target="_blank" id="googleplus" title="Google+" href="https://www.google.com/+JoniPuljuj%C3%A4rviFTW"></a>
-                <a target="_blank" id="github" title="GitHub" href="https://github.com/settheoreticalpineapple/"></a>
-                <a target="_blank" id="linkedin" title="LinkedIn" href="https://fi.linkedin.com/in/jonipuljujarvi"></a>
-                <a target="_blank" id="wordpress" title="WordPress" href="https://settheoreticalpineapple.wordpress.com/"></a>
-                <a target="_blank" id="soundcloud" title="SoundCloud" href="https://soundcloud.com/crudelis-diabolus"></a>
-                <a target="_blank" id="gravatar" title="Gravatar" href="https://gravatar.com/settheoreticalpineapple"></a>
-                <a target="_blank" id="aboutme" title="about.me" href="https://about.me/jonipuljujarvi"></a>
-            </aside>
         </main>
 
         <article class="gallery" id="writings">
@@ -137,7 +140,7 @@
                 <li>
                     My Bachelor’s Thesis:
                     <a lang="fi" href="https://drive.google.com/open?id=1ry-Buv3v8R81H2r6BNNmlV9DkXF1OBO0" target="_blank">Ultratulot
-                        ja Łośin lause</a> (“Ultraproducts andŁoś’s theorem”, in Finnish)
+                        ja Łośin lause</a> (“Ultraproducts and Łoś’s theorem”, in Finnish)
                 </li>
                 <li>
                     <a lang="fi" href="https://drive.google.com/open?id=0B3M1AZTOEkA0Z0FfQW50NVZfYWM" target="_blank">Mielivaltainen

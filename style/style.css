@@ -1,0 +1,169 @@
+@CHARSET "UTF-8";
+/* * * * * * * * * * * * *
+ * © 2018 Joni Puljujärvi
+ */
+
+
+/* Reset */
+
+* {
+    margin:  0;
+    padding: 0;
+    border:  0;
+}
+
+article, aside, details, figure, footer, header, main, nav, section, summary {display: block;}
+
+img {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    max-width: 100%;
+}
+
+
+.hidden {visibility: hidden;}
+
+
+
+/* Typographic elements */
+
+h1, h2 {
+    color: #BF360C;
+    text-shadow: 0.03em 0.025em 0.025em rgba(0, 0, 0, 0.5), 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000;
+}
+
+main h3 {
+    border-color:  rgba(0, 0, 0, 0.5);
+}
+
+main ~ article h3 {border-color:  rgba(255, 255, 255, 0.75)}
+
+ul, figure {
+    background-color: #FFECB3;
+    border: 0.1rem solid #FFD54F;
+}
+
+ul {
+    border-radius: 0.5rem;
+    padding: 1rem 1rem 1rem calc(1em + 1rem);
+    margin: 0.3rem;
+}
+
+figure {
+    box-sizing: border-box;
+    margin: 0.3rem;
+    max-width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+figcaption {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0.05rem 0 0;
+    margin: -0.05rem 0.5rem 0;
+    padding-top: 0.15rem;
+}
+
+figure img {
+    display: block;
+    cursor: zoom-in;
+    transition: all 250ms;
+}
+
+a, a:link, a:visited {color: #FF5722;}
+a:hover, a:active    {color: #FF8A65;}
+
+
+
+/* Selection */
+
+::selection {
+    background-color: #fdd835;
+    color: #f57f17;
+}
+::-moz-selection {
+    background-color: #fdd835;
+    color: #f57f17;
+}
+
+
+
+/* Structural elements */
+
+main footer {
+    color: #f0f4c3;
+    text-shadow: 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000;
+}
+
+main article {
+    border-color: #FFC107 #FFB300 #FFA000 #FF8F00;
+    background-color: #FFE082;
+    border-style: solid;
+    transition: all 1s ease-in-out;
+    box-shadow: 0.03em 0.025em 0.025em rgba(0, 0, 0, 0.75), 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000 inset;
+    opacity: 0.8;
+}
+
+#landscape {
+    background-image: url(../img/landscape.jpg);
+    background-size: 100% auto;
+    box-shadow: 0 0 1rem #3e2723 inset, 0 0 5rem rgba(0, 0, 0, 0.5) inset, -0.5rem -0.5rem 0.75em #3e2723;
+}
+
+
+
+/* Albums */
+
+figure.album {
+    float: left;
+    width: 100%;
+}
+
+figure.album img {
+    border: 2px solid rgba(0,0,0,0);
+    box-sizing: inherit;
+    float: left;
+    margin: 0;
+    width: 33.33%;
+    vertical-align: middle;
+}
+
+#validhtml {
+    /*background-color: rgba(255, 255, 255, 0.1);*/
+    display: block;
+    height: 64px;
+    width: 230px;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    border-radius: 1rem;
+}
+
+main ~ article ul, main ~ article figure {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: #f4511e;
+}
+
+
+
+/* Background */
+
+#background {
+    background-image: url(../img/autumn.jpg);
+    background-size: 100% auto;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: fixed;
+    height: 133.35vw;
+    width: 100%;
+}
+
+/* "Minipages" */
+
+main ~ article {
+    background-color: rgba(0, 0, 0, 0.95);
+    color: rgba(255, 255, 255, 0.9);
+}
+

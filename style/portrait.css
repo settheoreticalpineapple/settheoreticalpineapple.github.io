@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+/* * * * * * * * * * * * *
+ * © 2018 Joni Puljujärvi
+ */
+
+
+.round, .back-link {display: none;}
+
+aside.icons {
+    width: 100vw;
+    font-size: 10vw;
+    margin: 2vmin;
+}
+
+footer .icons {
+    display: none;
+}
+
+article {
+    float: left;
+    padding: 2em;
+    border-width: 0.5em;
+}
+
+#about {
+    margin: 0.25em;
+}
+
+body {
+    background-color: #000000;
+}
+
+#background {
+    z-index: -1;
+}
+
+#landscape {
+    float: left;
+    width: 100%;
+    min-height: 65vw;
+    padding: 5vw 0;
+    background-size: cover;
+    background-position: center center;
+    margin-top: 1em;
+}
+
+#contact {
+    float: none;
+    margin: 0 0.25em;
+    width: auto;
+}
+
+main footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: #000000;
+    opacity: 0.75;
+}
+
+main footer, main ~ article:first-of-type {
+    box-shadow:  0 -0.5rem 0.75em #000000;
+}
+
+main ~ article {
+}
+
+#validhtml {
+    margin: 1rem auto;
+}
+

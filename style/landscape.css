@@ -6,7 +6,10 @@
 
 /* Body & main*/
 
-body, html {height: 100%;}
+body, html {
+    height: 100%;
+    font-size: 1.05vw;
+}
 
 body {
     background: #000000 linear-gradient(to bottom, #FFFFFF, #FFFFFF, #000000, #000000) top left / cover no-repeat;
@@ -43,16 +46,9 @@ main > * {
 }
 
 #background {
-    background-size: 100% auto;
-    background-position: center top;
-    background-repeat: no-repeat;
-    position: fixed;
-    background-image: url(../img/autumn.jpg);
-    height: 133.35vw;
     transform: translateZ(-600px) scale(2.02);
     background-position: center 15vh;
     padding-bottom: 15vh;
-    width: 100%;
 }
 
 
@@ -70,17 +66,24 @@ h1, h2 {
     right: 0;
 }
 
+h1 {
+    top: 0;
+    line-height: 47.62rem;
+}
+
+h2 {
+    bottom: 0;
+    line-height: 28.57rem;
+}
+
 main footer {
     height: 0;
     top: 245vw;
-    text-align: center;
     line-height: 5vh;
     transform: translateZ(-600px) scale(2);
     position: fixed;
     backface-visibility: hidden;
     zoom: 100%;
-    color: #f0f4c3;
-    text-shadow: 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000;
 }
 
 main footer nav, main footer p {
@@ -89,28 +92,18 @@ main footer nav, main footer p {
     float: left;
 }
 
-main footer nav {
-    font-size: 1.5rem;
-}
-
 
 
 /* About and Contact */
 
 main article {
-    border-color: #FFC107 #FFB300 #FFA000 #FF8F00;
-    background-color: #FFE082;
-    border-style: solid;
     border-width: 0.75rem;
     min-width: 200px;
     min-height: 200px;
     margin: 10vh auto -6vh;
     width: 40%;
     box-sizing: border-box;
-    opacity: 0.8;
     padding: 2vw;
-    transition: all 1s ease-in-out;
-    box-shadow: 0.03em 0.025em 0.025em rgba(0, 0, 0, 0.75), 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000 inset;
 }
 
 #about {
@@ -128,13 +121,10 @@ main article {
     flex: 1;
 }
 
-#about + section + section {
+#landscape {
     top: 170vw;
-    background-image: url(../img/landscape.jpg);
-    background-size: 100% auto;
     padding-top: 5vw;
     height: 70vw;
-    box-shadow: 0 0 1rem #3e2723 inset, 0 0 5rem rgba(0, 0, 0, 0.5) inset, -0.5rem -0.5rem 0.75em #3e2723;
     width: 100vw;
 }
 
@@ -142,7 +132,7 @@ main article {
 
 /* round nav */
 
-#about + section {
+main section:first-of-type {
     top: 115vw;
 }
 
@@ -198,7 +188,6 @@ main article {
 }
 
 .round p::first-letter {
-    font-family: "Alegreya", serif;
     font-size: 6rem;
     display: block;
     font-weight: bold;
@@ -227,7 +216,6 @@ main article {
 /* "Minipages" */
 
 main ~ article {
-    background-color: rgba(0, 0, 0, 0.95);
     width: 36%;
     padding: 2rem 32%;
     height: calc(100vh - 4rem);
@@ -238,7 +226,6 @@ main ~ article {
     overflow-y: auto;
     display: none;
     transition: all 500ms;
-    color: rgba(255, 255, 255, 0.9);
     opacity: 0;
 }
 
@@ -270,37 +257,34 @@ main ~ article.visible .back-link {
     content: "↩ ";
 }
 
-main ~ article ul, main ~ article figure {
-    background-color: rgba(255, 255, 255, 0.1);
-    border-color: #f4511e;
+
+
+/* Icons */
+
+aside.icons {
+    width: 12vh;
+    font-size: 10vh;
+    margin: 2vh;
 }
 
-
-
-/* Albums */
-
-figure.album {
+footer .icons {
+    width: 30vh;
+    font-size: 7.5vh;
     float: left;
-    width: 100%;
+    height: 7.5vmin;
+    margin: 2vh calc(50% - 15vh) 0.5vh;
 }
 
-figure.album img {
-    border: 2px solid rgba(0,0,0,0);
-    box-sizing: inherit;
-    float: left;
-    margin: 0;
-    width: 33.33%;
-    vertical-align: middle;
+footer .icons a {
+    margin: 0 0.16em;
 }
+
+
+
+/* Imgview */
 
 #validhtml {
-    /*background-color: rgba(255, 255, 255, 0.1);*/
-    display: block;
-    height: 64px;
     margin: -2rem auto 1rem;
-    width: 230px;
-    padding: 0.5rem 0.5rem 0.5rem 1rem;
-    border-radius: 1rem;
 }
 
 #websites p {
