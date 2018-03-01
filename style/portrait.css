@@ -79,3 +79,10 @@ main ~ article {
     max-width: 100%;
 }
 
+body > *:last-child {
+    padding-bottom: 4em;
+}
+
+article > ul {
+    text-align: left;
+}

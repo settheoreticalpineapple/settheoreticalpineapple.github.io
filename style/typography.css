@@ -28,6 +28,10 @@ h2 {
     font-size: 3.33em;
 }
 
+h3, h4 {
+    text-align: left;
+}
+
 h3 {
     font-size: 2.5em;
     border-bottom: 0.05rem solid;
