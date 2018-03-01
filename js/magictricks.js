@@ -2,7 +2,34 @@
  * © 2018 Joni Puljujärvi
  */
 
-var ready=function(){var t=!1;return function(e){var n=function(){if(!t)return t=!0,e()},o=function(){if(!t){try{document.documentElement.doScroll("left")}catch(t){return void setTimeout(o,1)}return n()}};if("complete"===document.readyState)return n();if(document.addEventListener)document.addEventListener("DOMContentLoaded",n,!1),window.addEventListener("load",n,!1);else if(document.attachEvent){document.attachEvent("onreadystatechange",n),window.attachEvent("onload",n);var d=!1;try{d=null==window.frameElement}catch(t){}if(document.documentElement.doScroll&&d)return o()}}}();
+var ready = (function() {
+    var t = !1;
+    return function(e) {
+        var n = function() {
+            if(!t) return t=!0, e()
+        }, o = function() {
+            if(!t) {
+                try {
+                    document.documentElement.doScroll("left");
+                } catch(t) {
+                    return void setTimeout(o,1);
+                }
+                return n();
+            }
+        };
+        if ("complete" === document.readyState) return n();
+        if (document.addEventListener) document.addEventListener("DOMContentLoaded",n,!1),
+            window.addEventListener("load",n,!1);
+        else if(document.attachEvent) {
+            document.attachEvent("onreadystatechange",n), window.attachEvent("onload",n);
+            var d = !1;
+            try {
+                d = null == window.frameElement
+            } catch(t) {}
+            if(document.documentElement.doScroll&&d) return o();
+        }
+    };
+})();
         
 function toggleMinipage(id, open) {
     var fn = null;
@@ -29,17 +56,29 @@ function toggleMinipage(id, open) {
     return fn;
 }
 
-function loadLazy(el) {
+function loadLazy(el) { // loads all images and iframes who are descendants of el
     var iframes = document.getElementsByTagName("iframe");
     var images = document.getElementsByTagName("img");
     for (var i = 0; i < Math.max(iframes.length, images.length); i++) {
         if (i < iframes.length && el.contains(iframes[i]) && iframes[i].dataset.src !== undefined) {
-            iframes[i].src = iframes[i].dataset.src;
+            loadElement(iframes[i]);
         } else if (i < images.length && el.contains(images[i]) && images[i].dataset.src !== undefined) {
-            images[i].src = images[i].dataset.src;
+            loadElement(images[i]);
         }
     }
 }
+
+function loadElement(el) { // loads the element el
+    el.src = el.dataset.src;
+    el.removeAttribute("data-src");
+}
+
+function isScrolledIntoView(el) {
+    var rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom >= 0;
+}
+
+
 
 /* After DOM is loaded */
 ready(function() {
@@ -145,6 +184,17 @@ ready(function() {
         }
     })();
 
+
+    /* Portrait mode lazy loading */
+    var portrait = screen.height > screen.width;
+    if (portrait || screen.width <= 1024) window.addEventListener("scroll", function(event) {
+        var lazyElements = document.querySelectorAll("[data-src]");
+        for (var i = 0; i < lazyElements.length; i++) {
+            if (isScrolledIntoView(lazyElements[i])) {
+                loadElement(lazyElements[i]);
+            }
+        }
+    });
 
 
     /*
