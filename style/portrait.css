@@ -20,7 +20,7 @@ main header {
     font-size: 3.4vw;
 }
 
-article {
+article, noscript {
     float: left;
     padding: 1em;
     border-width: 0.25em;

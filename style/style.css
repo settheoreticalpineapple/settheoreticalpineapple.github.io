@@ -14,7 +14,7 @@
 
 article, aside, details, figure, footer, header, main, nav, section, summary {display: block;}
 
-img {
+img, picture {
     user-select: none;
     -moz-user-select: none;
     -webkit-user-select: none;
@@ -107,17 +107,21 @@ main footer {
 
 main article {
     border-color: #FFC107 #FFB300 #FFA000 #FF8F00;
-    background-color: #FFE082;
+    background-color: rgba(255, 224, 130, 0.87) /*#FFE082*/;
     border-style: solid;
     transition: all 1s ease-in-out;
     box-shadow: 0.03em 0.025em 0.025em rgba(0, 0, 0, 0.75), 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000 inset;
-    opacity: 0.8;
+    /*opacity: 0.8;*/
 }
 
 #landscape {
     background-image: url(../img/landscape.jpg);
     background-size: 100% auto;
     box-shadow: 0 0 1rem #3e2723 inset, 0 0 5rem rgba(0, 0, 0, 0.5) inset, -0.5rem -0.5rem 0.75em #3e2723;
+}
+
+.round {
+    color: #000000;
 }
 
 
@@ -152,6 +156,16 @@ main ~ article ul, main ~ article figure {
     border-color: #f4511e;
 }
 
+img[src$="loading.png"] {
+    width: 9em;
+    animation: rotate 1s linear infinite;
+    -moz-animation: rotate 1s linear infinite;
+    -webkit-animation: rotate 1s linear infinite;
+    padding: 2em;
+    box-sizing: border-box;
+    display: inline;
+}
+
 
 
 /* Background */
@@ -172,3 +186,30 @@ main ~ article {
     color: rgba(255, 255, 255, 0.9);
 }
 
+
+
+/* Animations */
+
+@keyframes cum {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to   {transform: rotate(360deg);}
+}
+
+
+
+/* JavaScript disabled? */
+
+noscript {
+    border-color: #ff8a65 #ff7043 #ff5722 #f4511e;
+    background-color: #fbe9e7;
+    border-style: solid;
+    border-width: 0.75rem;
+    padding: 1vw;
+    opacity: 0;
+    animation: cum 2s linear 1s forwards;
+}

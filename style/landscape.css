@@ -109,6 +109,8 @@ main article {
     height: 46vw;
 }
 
+#about picture {display: none;}
+
 #contact {
     display: flex;
     flex-direction: column;
@@ -355,20 +357,6 @@ footer .icons a {
 
 
 
-/* Animations */
-
-@keyframes cum {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes rotate {
-    from {transform: rotate(0deg);}
-    to   {transform: rotate(360deg);}
-}
-
-
-
 /* JavaScript disabled? */
 
 noscript {
@@ -376,16 +364,9 @@ noscript {
     top: 10vh;
     right: 5vw;
     left: initial;
-    border-color: #ff8a65 #ff7043 #ff5722 #f4511e;
-    background-color: #fbe9e7;
-    border-style: solid;
-    border-width: 0.75rem;
-    padding: 1vw;
     width: 20vw;
     height: 5vw;
     transform: scale(0.75);
-    opacity: 0;
-    animation: cum 2s linear 1s forwards;
 }
 
 

@@ -170,6 +170,7 @@ ready(function() {
                 }, 10, imgview, img);
             });
         }
+
         imgs = document.querySelectorAll("#websites figure img");
         for (var i = 0; i < imgs.length; i++) {
             var src;
@@ -178,8 +179,10 @@ ready(function() {
             } else {
                 src = imgs[i].getAttribute("src");
             }
-            src = src.split("small");
-            src = src[0] + src[1];
+            if (src.indexOf("small") !== -1) {
+                src = src.split("small");
+                src = src[0] + src[1];
+            }
             imgs[i].dataset.zoomInUrl = src;
         }
     })();
