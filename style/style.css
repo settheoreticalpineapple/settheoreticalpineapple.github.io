@@ -23,6 +23,10 @@ img, picture {
     max-width: 100%;
 }
 
+picture img {
+    display: block;
+}
+
 
 .hidden {visibility: hidden;}
 
@@ -41,7 +45,7 @@ main h3 {
 
 main ~ article h3 {border-color:  rgba(255, 255, 255, 0.75)}
 
-ul, figure {
+ul, figure, picture {
     background-color: #FFECB3;
     border: 0.1rem solid #FFD54F;
 }
@@ -184,6 +188,10 @@ img.not-loaded {
 main ~ article {
     background-color: rgba(0, 0, 0, 0.95);
     color: rgba(255, 255, 255, 0.9);
+}
+
+#faq p {
+    text-indent: 0;
 }
 
 

@@ -34,7 +34,8 @@ var ready = (function() {
 function toggleMinipage(id, open) {
     var fn = null;
     if (open) {
-        fn = (function() {
+        fn = (function(event) {
+            event.preventDefault();
             var el = document.getElementById(id);
             el.classList.add("active");
             setTimeout(function(){
@@ -46,7 +47,8 @@ function toggleMinipage(id, open) {
             }
         });
     } else {
-        fn = (function() {
+        fn = (function(event) {
+            event.preventDefault();
             document.getElementById(id).classList.remove("visible");
             setTimeout(function(){
                 document.getElementById(id).classList.remove("active");
@@ -114,12 +116,14 @@ ready(function() {
         document.getElementById("music-link").onclick = toggleMinipage("music", true);
         document.getElementById("art-link").onclick = toggleMinipage("art", true);
         document.getElementById("websites-link").onclick = toggleMinipage("websites", true);
+        document.getElementById("faq-link").onclick = toggleMinipage("faq", true);
         var minipages = document.querySelectorAll("main ~ article");
         for (var i = 0; i < minipages.length; i++) {
             minipages[i].hasBeenVisited = false;
             var a = document.createElement("a");
             a.classList.add("back-link");
             a.appendChild(document.createTextNode("Back"));
+            a.setAttribute("href", "#");
             minipages[i].appendChild(a);
             a.onclick = toggleMinipage(minipages[i].id, false);
         }

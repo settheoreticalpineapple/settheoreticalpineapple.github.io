@@ -114,7 +114,7 @@ main article {
 #contact {
     display: flex;
     flex-direction: column;
-    height: 38vw;
+    height: 41vw;
 }
 
 #contact > div {
