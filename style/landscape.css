@@ -145,6 +145,8 @@ main section:first-of-type {
     left: 34vw;
     top: 9vw;
     animation: rotate 256s infinite linear;
+    -moz-animation: rotate 256s infinite linear;
+    -webkit-animation: rotate 256s infinite linear;
     box-shadow: 0.03em 0.025em 0.025em rgba(0, 0, 0, 0.5), 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000, 0 0 0.05rem #000000 inset;
 }
 
@@ -155,6 +157,8 @@ main section:first-of-type {
     background: #BF360C;
     position: absolute;
     animation: rotate 256s infinite linear reverse;
+    -moz-animation: rotate 256s infinite linear reverse;
+    -webkit-animation: rotate 256s infinite linear reverse;
     box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.5),
     0 0 0.5rem 0 rgba(0, 0, 0, 0.5) inset;
     cursor: pointer;

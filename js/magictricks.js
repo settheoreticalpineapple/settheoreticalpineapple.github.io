@@ -71,6 +71,7 @@ function loadLazy(el) { // loads all images and iframes who are descendants of e
 function loadElement(el) { // loads the element el
     el.src = el.dataset.src;
     el.removeAttribute("data-src");
+    el.classList.remove("not-loaded");
 }
 
 function isScrolledIntoView(el) {

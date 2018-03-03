@@ -156,7 +156,7 @@ main ~ article ul, main ~ article figure {
     border-color: #f4511e;
 }
 
-img[src$="loading.png"] {
+img.not-loaded {
     width: 9em;
     animation: rotate 1s linear infinite;
     -moz-animation: rotate 1s linear infinite;
@@ -212,4 +212,6 @@ noscript {
     padding: 1vw;
     opacity: 0;
     animation: cum 2s linear 1s forwards;
+    -moz-animation: cum 2s linear 1s forwards;
+    -webkit-animation: cum 2s linear 1s forwards;
 }
