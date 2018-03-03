@@ -158,9 +158,9 @@ main ~ article ul, main ~ article figure {
 
 img.not-loaded {
     width: 9em;
-    animation: rotate 1s linear infinite;
+/*    animation: rotate 1s linear infinite;
     -moz-animation: rotate 1s linear infinite;
-    -webkit-animation: rotate 1s linear infinite;
+    -webkit-animation: rotate 1s linear infinite;*/
     padding: 2em;
     box-sizing: border-box;
     display: inline;
