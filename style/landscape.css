@@ -400,6 +400,6 @@ noscript {
 /* Firefox scrollbars */
 
 * {
-    scrollbar-color: #FFAB91 #FF5722;
+    scrollbar-color: #FF5722 #FFAB91;
     scrollbar-width: thin;
 }
