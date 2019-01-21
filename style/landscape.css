@@ -395,3 +395,11 @@ noscript {
 }
 ::-webkit-scrollbar-corner {height: 0;}
 ::-webkit-resizer {height: 0;}
+
+
+/* Firefox scrollbars */
+
+* {
+    scrollbar-color: #FFAB91 #FF5722;
+    scrollbar-width: thin;
+}
