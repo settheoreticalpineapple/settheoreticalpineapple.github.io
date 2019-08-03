@@ -79,7 +79,7 @@ main footer {
     top: 245vw;
     line-height: 5vh;
     transform: translateZ(-600px) scale(2);
-    position: fixed;
+    position: relative;
     backface-visibility: hidden;
     zoom: 100%;
 }
