@@ -64,6 +64,10 @@ body {
     width: auto;
 }
 
+#contact > div:last-child {
+    display: none;
+}
+
 main footer {
     position: fixed;
     bottom: 0;

@@ -32,10 +32,37 @@ picture img {
 
 
 
+/* Colors and backgrounds */
+
+html {
+    --header-color: #BF360C;
+    --frame-colors: #FFC107 #FFB300 #FFA000 #FF8F00;
+    --main-article-background-color: rgba(255, 224, 130, 0.87);
+    --round-primary-color: #BF360C;
+    --round-secondary-color: #FFE082;
+    --round-primary-color-hover: #FF8A65;
+    --round-secondary-color-hover: #fdd835;
+    --footer-color: #f0f4c3;
+    --link-color: #FF5722;
+    --link-hover-color: #FF8A65;
+    --back-link-text-decoration-color: rgba(255, 87, 34, 0.33);
+    --figure-background-color: #FFECB3;
+    --figure-border-color: #FFD54F;
+    --article-figure-border-color: #f4511e;
+    --selection-color: #f57f17;
+    --selection-background-color: #fdd835;
+    --scrollbar-primary-color: #FF5722;
+    --scrollbar-secondary-color: #FFAB91;
+    --background-image: url(../img/autumn.jpg);
+    --landscape-image: url(../img/landscape.jpg);
+}
+
+
+
 /* Typographic elements */
 
 h1, h2 {
-    color: #BF360C;
+    color: var(--header-color);
     text-shadow: 0.03em 0.025em 0.025em rgba(0, 0, 0, 0.5), 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000;
 }
 
@@ -46,8 +73,8 @@ main h3 {
 main ~ article h3 {border-color:  rgba(255, 255, 255, 0.75)}
 
 ul, figure, picture {
-    background-color: #FFECB3;
-    border: 0.1rem solid #FFD54F;
+    background-color: var(--figure-background-color);
+    border: 0.1rem solid var(--figure-border-color);
 }
 
 ul {
@@ -78,20 +105,20 @@ figure img {
     transition: all 250ms;
 }
 
-a, a:link, a:visited {color: #FF5722;}
-a:hover, a:active    {color: #FF8A65;}
+a, a:link, a:visited {color: var(--link-color);}
+a:hover, a:active    {color: var(--link-hover-color);}
 
 
 
 /* Selection */
 
 ::selection {
-    background-color: #fdd835;
-    color: #f57f17;
+    background-color: var(--selection-background-color);
+    color: var(--selection-color);
 }
 ::-moz-selection {
-    background-color: #fdd835;
-    color: #f57f17;
+    background-color: var(--selection-background-color);
+    color: var(--selection-color);
 }
 
 
@@ -105,13 +132,13 @@ main {
 }
 
 main footer {
-    color: #f0f4c3;
+    color: var(--footer-color);
     text-shadow: 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000;
 }
 
 main article {
-    border-color: #FFC107 #FFB300 #FFA000 #FF8F00;
-    background-color: rgba(255, 224, 130, 0.87) /*#FFE082*/;
+    border-color: var(--frame-colors);
+    background-color: var(--main-article-background-color);
     border-style: solid;
     transition: all 1s ease-in-out;
     box-shadow: 0.03em 0.025em 0.025em rgba(0, 0, 0, 0.75), 0 0 0.1rem #000000, 0.05rem 0.05rem 0.1rem #000000 inset;
@@ -119,7 +146,7 @@ main article {
 }
 
 #landscape {
-    background-image: url(../img/landscape.jpg);
+    background-image: var(--landscape-image);
     background-size: 100% auto;
     box-shadow: 0 0 1rem #3e2723 inset, 0 0 5rem rgba(0, 0, 0, 0.5) inset, -0.5rem -0.5rem 0.75em #3e2723;
 }
@@ -157,7 +184,7 @@ figure.album img {
 
 main ~ article ul, main ~ article figure {
     background-color: rgba(255, 255, 255, 0.1);
-    border-color: #f4511e;
+    border-color: var(--article-figure-border-color);
 }
 
 img.not-loaded {
@@ -175,7 +202,7 @@ img.not-loaded {
 /* Background */
 
 #background {
-    background-image: url(../img/autumn.jpg);
+    background-image: var(--background-image);
     background-size: 100% auto;
     background-position: center top;
     background-repeat: no-repeat;
@@ -213,8 +240,8 @@ main ~ article {
 /* JavaScript disabled? */
 
 noscript {
-    border-color: #ff8a65 #ff7043 #ff5722 #f4511e;
-    background-color: #fbe9e7;
+    border-color: var(--frame-colors);
+    background-color: var(--main-article-background-color);
     border-style: solid;
     border-width: 0.75rem;
     padding: 1vw;
